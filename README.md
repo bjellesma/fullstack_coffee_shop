@@ -1,35 +1,68 @@
-# Coffee Shop Full Stack
+# Fullstack Coffee Shop
 
-## Full Stack Nano - IAM Final Project
+## Getting Started
 
-Udacity has decided to open a new digitally enabled cafe for students to order drinks, socialize, and study hard. But they need help setting up their menu experience.
+### Dependencies
 
-You have been called on to demonstrate your newly learned skills to create a full stack drink menu application. The application must:
+1. Download and install [Python](https://www.python.org/downloads/) if it is not already available on your system
+2. `pipenv` is used as the virtual environment of choice for this application and you can install it using `pip install pipenv`
+3. Install [NodeJS](https://nodejs.org/en/download/) in order to run the development scripts (nodejs is also planned to be used for the frontend)
 
-1) Display graphics representing the ratios of ingredients in each drink.
-2) Allow public users to view drink names and graphics.
-3) Allow the shop baristas to see the recipe information.
-4) Allow the shop managers to create new drinks and edit existing drinks.
+### Setup
 
-## Tasks
+0. Clone this project to your machine.
 
-There are `@TODO` comments throughout the project. We recommend tackling the sections in order. Start by reading the READMEs in:
+1. From the command line, navigate to the root directory, `fullstack_coffee_shop`.
 
-1. [`./backend/`](./backend/README.md)
-2. [`./frontend/`](./frontend/README.md)
+#### Backend
 
-## About the Stack
+For the next steps, use the backend folder
 
-We started the full stack application for you. It is desiged with some key functional areas:
+2. Fill in `.env-sample` file using the following 
 
-### Backend
+```
+DATABASE_NAME=name of sqlite database file to us
+AUTH0_DOMAIN=the tenant domain for users to login with
+ALGORITHM=prefered algorithm to use when encrypting data
+API_AUDIENCE=the Identifier for the auth api that you've created
+```
 
-The `./backend` directory contains a partially completed Flask server with a pre-written SQLAlchemy module to simplify your data needs. You will need to complete the required endpoints, configure, and integrate Auth0 for authentication.
+**Note**: The data present already is there for Udacity's Fullstack Coffee Shop Project
 
-[View the README.md within ./backend for more details.](./backend/README.md)
+3. Rename `.env-sample` to `.env` when you've finished editing `.env-sample`
+4. Run `pipenv install` to install the virtual environment
+    1. This command will also install the backend packages located inside of `pipfile`
+
+5. Navigate to the `/backend` directory on the command line.
+
+6. Run `npm run server` to start the development server.
 
 ### Frontend
 
-The `./frontend` directory contains a complete Ionic frontend to consume the data from the Flask server. You will only need to update the environment variables found within (./frontend/src/environment/environment.ts) to reflect the Auth0 configuration details set up for the backend app. 
+For the next steps, use the folder `frontend`
 
-[View the README.md within ./frontend for more details.](./frontend/README.md)
+1. Run `npm install`
+2. Change values in `src/environments/environments.ts` if different from the udacity test
+3. Run `npm run start` to start the frontend server on port 4200
+3. In a web browser, navigate to `http://localhost:4200`
+
+## Contributing
+
+1. Fork this repository
+
+2. Use the instructions to set up a local development server
+    1. Use the api documentation for more information on how to make requests to the endpoints.
+
+3. Once you've made any modifications using the Code Style Guide listed in the next section, run the code through unit tests using `npm run test`.
+    1. If you've written any new endpoints, please also write a new unit test for the endpoint.
+    2. Please also pay attention to the code coverage as output and ensure that coverage is at least 80%
+4. When your code is passing the unit tests, please submit a pull request
+
+## Code Style Guide
+
+This code abides by [PEP8](https://www.python.org/dev/peps/pep-0008/) with the exception of using tabs over any spaces.
+
+## Credits
+
+* Bill Jellesma
+* Udacity - Udacity created the idea for the course as a teaching project
