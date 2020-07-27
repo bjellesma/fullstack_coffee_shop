@@ -1,0 +1,12 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "## Getting Started",
+  "main": "index.js",
+  "scripts": {
+    "server": "pipenv run flask run --reload"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
